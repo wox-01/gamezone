@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameZone - Giriş Yap</title>
+  <link rel="stylesheet" href="login-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login-container">
+      <!-- Logo ve Başlık -->
+      <div class="header">
+        <div class="logo">
+          <i class="fas fa-gamepad"></i>
+          <span>GameZone</span>
+        </div>
+        <h1>Oyuncu Video Platformu</h1>
+        <p>Kliplerini paylaş, oyuncularla bağlantı kur!</p>
+      </div>
+
+      <!-- Giriş/Kayıt Formları -->
+      <div class="forms-container">
+        <!-- Giriş Formu -->
+        <div class="form-section active" id="login-form">
+          <h2>Giriş Yap</h2>
+          
+          <!-- Google ile Giriş -->
+          <button class="google-btn" id="google-login">
+            <i class="fab fa-google"></i>
+            Google ile Giriş Yap
+          </button>
+          
+          <div class="divider">
+            <span>veya</span>
+          </div>
+          
+          <form class="login-form">
+            <div class="form-group">
+              <label for="login-email">E-posta</label>
+              <input type="email" id="login-email" placeholder="E-posta adresinizi girin" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="login-password">Şifre</label>
+              <div class="password-input">
+                <input type="password" id="login-password" placeholder="Şifrenizi girin" required>
+                <i class="fas fa-eye toggle-password"></i>
+              </div>
+            </div>
+            
+            <div class="form-options">
+              <label class="checkbox">
+                <input type="checkbox" id="remember-me">
+                <span class="checkmark"></span>
+                Beni hatırla
+              </label>
+              <a href="#" class="forgot-password">Şifremi unuttum</a>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-sign-in-alt"></i>
+              Giriş Yap
+            </button>
+          </form>
+          
+          <p class="switch-text">
+            Hesabınız yok mu? 
+            <a href="#" class="switch-btn" data-target="register-form">Kayıt Ol</a>
+          </p>
+        </div>
+
+        <!-- Kayıt Formu -->
+        <div class="form-section" id="register-form">
+          <h2>Kayıt Ol</h2>
+          
+          <!-- Google ile Kayıt -->
+          <button class="google-btn" id="google-register">
+            <i class="fab fa-google"></i>
+            Google ile Kayıt Ol
+          </button>
+          
+          <div class="divider">
+            <span>veya</span>
+          </div>
+          
+          <form class="register-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="register-firstname">Ad</label>
+                <input type="text" id="register-firstname" placeholder="Adınız" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="register-lastname">Soyad</label>
+                <input type="text" id="register-lastname" placeholder="Soyadınız" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="register-username">Kullanıcı Adı</label>
+              <input type="text" id="register-username" placeholder="Kullanıcı adınız" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="register-email">E-posta</label>
+              <input type="email" id="register-email" placeholder="E-posta adresinizi girin" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="register-password">Şifre</label>
+              <div class="password-input">
+                <input type="password" id="register-password" placeholder="Şifrenizi oluşturun" required>
+                <i class="fas fa-eye toggle-password"></i>
+              </div>
+              <div class="password-strength">
+                <div class="strength-bar">
+                  <div class="strength-fill"></div>
+                </div>
+                <span class="strength-text">Şifre gücü</span>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="register-confirm-password">Şifre Tekrar</label>
+              <div class="password-input">
+                <input type="password" id="register-confirm-password" placeholder="Şifrenizi tekrar girin" required>
+                <i class="fas fa-eye toggle-password"></i>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="favorite-game">Favori Oyun</label>
+              <select id="favorite-game" required>
+                <option value="">Oyun seçin...</option>
+                <option value="pubg">PUBG</option>
+                <option value="csgo">CS:GO</option>
+                <option value="fortnite">Fortnite</option>
+                <option value="valorant">Valorant</option>
+                <option value="other">Diğer</option>
+              </select>
+            </div>
+            
+            <div class="form-options">
+              <label class="checkbox">
+                <input type="checkbox" id="terms-accept" required>
+                <span class="checkmark"></span>
+                <a href="#" class="terms-link">Kullanım şartlarını</a> kabul ediyorum
+              </label>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-user-plus"></i>
+              Kayıt Ol
+            </button>
+          </form>
+          
+          <p class="switch-text">
+            Zaten hesabınız var mı? 
+            <a href="#" class="switch-btn" data-target="login-form">Giriş Yap</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arka Plan Animasyonu -->
+    <div class="background-animation">
+      <div class="floating-icon">🎮</div>
+      <div class="floating-icon">🎯</div>
+      <div class="floating-icon">🏆</div>
+      <div class="floating-icon">⚡</div>
+      <div class="floating-icon">🔥</div>
+    </div>
+  </div>
+
+  <script src="login-script.js"></script>
+</body>
+</html> 
